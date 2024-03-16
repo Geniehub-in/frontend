@@ -1,10 +1,11 @@
 // import { useState } from "react";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LandingPage from "./components/Page/Landingpage/LandingPage";
-import LoginPage from "./credentials/Login-page/Login_page";
-// import Sign_in from "./credentials/sign-in/Sign_in";
+import Login_page from "./credentials/Login-page/Login_page";
+import PhoneOtpVerification from "./credentials/PhoneOtpVerification/PhoneOtpVerification";
 // import Sign_up from "./credentials/sign-up/Sign_up";
 // import LandingPage from "./components/Page/Landingpage/LandingPage";
 // import SignIn from "./credentials/sign-in/SignIn";
@@ -16,13 +17,19 @@ function App() {
   // }
   return (
     <div className="App">
-      <Header />
-      <LandingPage />
-      <LoginPage />
-      {/* {isLogin === false ? <SignIn /> : <LandingPage />} */}
-      {/* <Sign_in /> */}
-      {/* <Sign_up /> */}
-      <Footer />
+      <Routes>
+        <Route path="/" element={[<Header />, <LandingPage />, <Footer />]} />
+        <Route
+          path="/home"
+          element={[
+            <Header />,
+            <PhoneOtpVerification />,
+            <LandingPage />,
+            <Footer />,
+          ]}
+        />
+        <Route path="/sign-in" element={[<Header />, <Login_page />]} />
+      </Routes>
     </div>
   );
 }

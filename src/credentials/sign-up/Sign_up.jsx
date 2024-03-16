@@ -183,7 +183,7 @@ export default function Sign_up(props) {
             </button>
             <h5 style={{ fontWeight: "450", margin: "5px 1px" }}>
               Already have an account?{" "}
-              <a href="/sign_in" onClick={props.handleCreate}>
+              <a href="/sign-in" onClick={props.handleCreate}>
                 Login
               </a>
             </h5>

@@ -1,4 +1,5 @@
 import React from "react";
+import { SocialIcon } from "react-social-icons";
 import "./Footer.css";
 
 export default function Footer() {
@@ -21,25 +22,61 @@ export default function Footer() {
           </div>
         </div>
         <div className="footer-links secondcolumn">
-          <a href="/career">Career</a>
-          <a href="/more">More</a>
+          <div>
+            <a href="/career">Career</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+          </div>
         </div>
+        <div className="footer-links secondcolumn">
+          <div>
+            <a href="/career">Career</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+          </div>
+        </div>
+        <div className="footer-links secondcolumn">
+          <div>
+            <a href="/career">Career</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+            <a href="/more">More</a>
+          </div>
+        </div>
+
         <div className="thirdcolumn">
-          Subscribe to our newsletter
-          <div>
-            <input type="email" alt="Email" placeholder="Your email address" />
+          <div className="subscribe">SUBSCRIBE TO NEWSLETTER</div>
+          <div className="subscribe">
+            <input
+              type="email"
+              alt="Email"
+              placeholder="Your email address __________"
+            />
           </div>
-          <div>
-            <img src="" alt="insta logo" />
-            <img src="" alt="twitter logo" />
-            <img src="" alt="linkedin logo" />
-            <img src="" alt="fb logo" />
+          <div className="social-icons">
+            <SocialIcon
+              className="social-icon"
+              url="https://www.instagram.com/"
+            />
+            <SocialIcon className="social-icon" url="https://twitter.com" />
+            <SocialIcon
+              className="social-icon"
+              url="https://www.linkedin.com/"
+            />
+            <SocialIcon
+              className="social-icon"
+              url="https://www.facebook.com/"
+            />
           </div>
-          <div>
+          <div className="country-flag">
             <img
               src="https://upload.wikimedia.org/wikipedia/en/thumb/4/41/Flag_of_India.svg/383px-Flag_of_India.svg.png"
               alt="India"
-              style={{ height: "50px", marginTop: "10px" }}
             />
           </div>
         </div>
