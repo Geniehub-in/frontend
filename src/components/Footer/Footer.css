@@ -1,9 +1,7 @@
-/* Footer.css */
 .footer {
   background-color: #000;
   color: #fff;
   padding: 20px 0;
-  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -13,6 +11,7 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
+  flex-wrap: wrap; /* Add flex-wrap to handle content wrapping */
   justify-content: space-between;
   align-items: center;
 }
@@ -27,6 +26,100 @@
   text-decoration: underline;
 }
 
+.logo {
+  font-weight: bold;
+}
+
+.firstcolumn {
+  flex: 0.4;
+  margin-right: 20px;
+}
+
+.secondcolumn {
+  display: flex;
+  flex: 0;
+  margin: 0 30px;
+}
+
+.thirdcolumn {
+  display: flex;
+  flex: 0.3;
+  flex-direction: column;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
 .copyright {
   font-size: 14px;
+}
+
+.subscribe {
+  margin-top: 0;
+}
+.subscribe input {
+  margin-top: 10px;
+  width: 65%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+}
+.social-icon {
+  height: 30px !important; /* Adjust size of SocialIcon */
+  width: 30px !important;
+  margin-right: 5%;
+}
+/* .country-flag img {
+  text-align: center;
+  height: 25%;
+  width: 25%;
+  margin-top: 10px;
+} */
+.country-flag img {
+  height: 50px; /* Adjust size of country flag */
+  width: auto; /* Ensure aspect ratio is maintained */
+  margin-top: 10px;
+}
+
+/*  */
+
+/* .firstcolumn,
+.secondcolumn,
+.thirdcolumn {
+  flex: 1;
+  margin-right: 20px;
+} */
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 768px) {
+  .firstcolumn,
+  .secondcolumn,
+  .thirdcolumn {
+    flex: 1 1 100%; /* Adjust columns to take full width on smaller screens */
+    margin-right: 0;
+    margin-bottom: 20px; /* Add margin at the bottom of columns for spacing */
+  }
+
+  .footer-links,
+  .secondcolumn {
+    display: flex;
+    justify-content: center;
+    text-align: center; /* Center-align links in smaller screens */
+  }
+
+  .subscribe input {
+    width: calc(100% - 20px); /* Adjust input width for padding */
+  }
 }

@@ -1,37 +1,93 @@
-/* HeaderNavbar.css */
 .header-navbar {
-  background-color: #333;
-  color: #fff;
-  padding: 10px 20px;
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Ensure it's above other content */
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 20px; /* Adjust padding as needed */
 }
-
-.header-navbar nav ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.header-navbar nav ul li {
-  display: block; /* Display list items as blocks */
-}
-
-.header-navbar nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 20px;
-  padding: 8px 12px; /* Add padding to anchor tags */
+.button {
+  background-color: purple;
+  color: white;
+  border: none;
+  padding: 6px 18px;
+  border-radius: 20px;
+  cursor: pointer;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
+  width: 150px; /* Adjust logo size as needed */
+}
+
+.logoclass {
+  margin-left: 10%;
+}
+.navclass {
+  margin-right: 10%;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  font-size: large;
+  margin-right: 20px; /* Adjust margin between menu items as needed */
+}
+
+nav ul li:last-child {
+  margin-right: 0; /* Remove margin from last menu item */
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+/* Adjust styles for smaller screens */
+@media screen and (max-width: 768px) {
+  .header-navbar {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+  .logo {
+    width: 90px; /* Adjust logo size for smaller screens */
+    margin: 5px 5px; /* Add margin below logo for spacing */
+  }
+
+  nav ul {
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0 5px;
+  }
+
+  nav ul li {
+    font-size: small;
+    font-weight: 400;
+    margin: 6px 6px; /* Adjust margin for smaller screens */
+  }
+  button {
+    background-color: purple;
+    color: white;
+    border: none;
+    padding: 0;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+}
+
+button:hover {
+  background-color: #6a5acd; /* Change color on hover */
+}
+/* Sticky header */
+.sticky-header {
+  position: sticky;
+  top: 0;
+  background-color: white; /* Adjust background color as needed */
+  z-index: 1000; /* Ensure the header is above other content */
 }
