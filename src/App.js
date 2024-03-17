@@ -5,7 +5,6 @@ import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import LandingPage from "./components/Page/Landingpage/LandingPage";
 import Login_page from "./credentials/Login-page/Login_page";
-import PhoneOtpVerification from "./credentials/PhoneOtpVerification/PhoneOtpVerification";
 // import Sign_up from "./credentials/sign-up/Sign_up";
 // import LandingPage from "./components/Page/Landingpage/LandingPage";
 // import SignIn from "./credentials/sign-in/SignIn";
@@ -18,17 +17,26 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path="/" element={[<Header />, <LandingPage />, <Footer />]} />
+        <Route
+          path="/"
+          element={[
+            <Header key="header" />,
+            <LandingPage key="landingPage" />,
+            <Footer key="footer" />,
+          ]}
+        />
         <Route
           path="/home"
           element={[
-            <Header />,
-            <PhoneOtpVerification />,
-            <LandingPage />,
-            <Footer />,
+            <Header key="header" />,
+            <LandingPage key="landingPage" />,
+            <Footer key="footer" />,
           ]}
         />
-        <Route path="/sign-in" element={[<Header />, <Login_page />]} />
+        <Route
+          path="/sign-in"
+          element={[<Header key="header" />, <Login_page key="loginPage" />]}
+        />
       </Routes>
     </div>
   );
